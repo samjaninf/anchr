@@ -6,6 +6,11 @@ const express = require('express')
 
 let isFirstConnect = true
 
+if (!config.secret) {
+    console.error('Missing required environment variable ANCHR_SECRET.')
+    process.exit(1)
+}
+
 function connect(success, error) {
     function onConnectFailed(err) {
         setTimeout(() => { error() }, 0)

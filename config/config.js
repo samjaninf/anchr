@@ -29,7 +29,7 @@ const config = {
             shortlinkCleanup: process.env.ANCHR_LINKCHECK_UPDATE_CRON || '20 0 * * *',
         },
         checkLinks: process.env.ANCHR_CHECK_LINKS !== 'false',
-        secret: process.env.ANCHR_SECRET || 'shhh',
+        secret: process.env.ANCHR_SECRET,
         tokenExpire: '7d',
         workers: 2,
         googleApiKey: process.env.ANCHR_GOOGLE_API_KEY || '',
